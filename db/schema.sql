@@ -1,0 +1,1 @@
+CREATE DATABASE alien_sighting_db;
