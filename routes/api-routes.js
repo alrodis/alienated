@@ -19,9 +19,17 @@ module.exports = function(app){
 		})
 	});
 
-	app.get("/comments", function(req, res) {
-    db.Sightings.findAll({}).then(function(aliendb) {
+	app.post("/comments", function(req, res) {
+    db.Sightings.findAll({
+    	where: {
+    		state: req.body.userState
+    	},
+
+    	limit: 9
+    }).then(function(aliendb) {
     res.json(aliendb);
+    console.log(req.body.userState);
+    console.log(aliendb);
     });
 
 	});

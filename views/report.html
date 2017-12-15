@@ -27,24 +27,21 @@
                 </div>
             </div>
         </div>
-
         <div class="container-fluid submit-form">
-            
-            
-<div class="col-md-2 navigation-panel">
-    <div class="panel panel-default">
-        <img class="img-circle home-icon" src="public/assets/img/ufo3.jpeg" alt="Report a UFO Sighting image" width="140" height="140">
-        <p>Home</p>
-        <hr>
-        <img class="img-circle abduction" src="public/assets/img/abduct.jpg" alt="Abduction likelihood image" width="140" height="140">
-        <p>Abduction</p>
-        <hr>
-        <img class="img-circle search" src="public/assets/img/ufo2.png" alt="Search UFO Sightings image" width="140" height="140">
-        <p>Search Sightings</p>
-        <hr>
-    </div>
-</div>
-            		<div class="row">
+            <div class="col-md-2 navigation-panel">
+                <div class="panel panel-default">
+                    <a href="homepage.html"><img class="img-circle home-icon" src="public/assets/img/ufo3.jpeg" alt="Homepage image" width="140" height="140"></a>
+                    <p>Home</p>
+                    <hr>
+                    <a href="abduction.html"><img class="img-circle abduction" src="public/assets/img/abduct.jpg" alt="Abduction likelihood image" width="140" height="140"></a>
+                    <p>Abduction</p>
+                    <hr>
+                    <a href="comments.html"><img class="img-circle search" src="public/assets/img/ufo2.png" alt="Search UFO Sightings image" width="140" height="140"></a>
+                    <p>Search Sightings</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -101,24 +98,42 @@
                                 <div class="col-md-9">
                                     <div class="form-group">
                                         <h4>Comments</h4>
-                                        <textarea rows="10" cols="20" type="text" class="form-control" id="comments">
-                                        </textarea>	
+                                        <textarea rows="10" cols="20" type="text" class="form-control" id="comments"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn-primary btn-lg" id="submit">Submit</button>
+                            <button type="button" class="btn-primary btn-lg" id="submit">Submit</button>
                     </div>
                     </form>
                 </div>
                 <!--closes panel-->
             </div>
             <!--closes col-->
-            
         </div>
         <!--closes row-->
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">UFO Sighting Confirmed</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Thank you for submitting your UFO Sighting.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script src="public/assets/js/aliens.js"></script>
 </body>
-		
+
 </html>

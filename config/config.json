@@ -1,7 +1,7 @@
 { 
   "development": {
     "username": "root",
-    "password": "Fourdown1!",
+    "password": null,
     "database": "alien_sighting_db",
     "host": "localhost",
     "dialect": "mysql"

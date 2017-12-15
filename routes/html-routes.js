@@ -20,6 +20,14 @@ module.exports = function(app) {
   app.get("/comments", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/comments.html"));
   });
+
+  app.get("/abduction", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/abduction.html"));
+  });
+
+  app.get("/map", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/d3Test.html"));
+  });
   
 
   // app.get("/comments", function(req, res) {

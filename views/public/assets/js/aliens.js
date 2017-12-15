@@ -44,6 +44,17 @@ function newSighting(){
 		}).then(
 			function(){
 				console.log("newSighting was created");
+				$("#myModal").modal("toggle");
+				//console.log("Before.." + $("#city").val());
+				$("#city").val("");
+				//console.log("After.." + $("#city").val());	
+				$("#state").val("");
+				$("#country").val("");
+				$("#date").val("");
+				$("#shape").val("");
+				$("#minutes").val("");
+				$("#comments").val("");
+
 			});
 		}
 	}	
