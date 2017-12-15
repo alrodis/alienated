@@ -50,8 +50,10 @@ body {
 
 .search-form {
 	/*background-color: red;*/
+  height: 500px;
 
 	background-image: url("../img/web-back2.jpg");
+  height: 800px;
 	/*font-size: small;*/
 }
 
@@ -87,6 +89,7 @@ body {
   padding-bottom:50px;
   padding-right: 50px;
   padding-left: 50px;
+  height: 500px;
 }
 
 .sighting {
@@ -116,6 +119,7 @@ body {
   /*background-color: red;*/
 }
 
+/*search results*/
 .circle {
     background: url("../img/outerSpace.jpg");
     border-radius: 200px;
@@ -135,6 +139,7 @@ body {
 }
 
 
+/*d3*/
   .state{
     fill: none;
     stroke: #a9a9a9;
