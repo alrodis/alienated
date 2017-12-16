@@ -6,7 +6,7 @@ body {
 	font-family: 'Space Mono', monospace;
 }
 
-
+/*jumbotron on all pages*/
 .jumbotron-billboard .img {
     margin-bottom: 0px;
     opacity: 0.5;
@@ -40,28 +40,60 @@ body {
     padding-bottom:20px;
   }
 }
+/*end jumbotron on all pages*/
 
+/*pats CSS ISH*/
+.nasaImg {
+    border-radius: 300px;
+    color: white;
+    height: 300px;
+    font-weight: bold;
+    width: 300px;
+    display: table;
+    margin: auto;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#hiddenE{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/*Submit UFO sightings page*/
 .submit-form {
 	/*background-color: red;*/
 
-	background-image: url("../img/web-back2.jpg");
+	/*background-image: url("../img/web-back2.jpg");*/
 	/*font-size: small;*/
 }
+/*end Submit UFO sightings page*/
 
+
+
+/*search UFO sightings page*/
 .search-form {
 	/*background-color: red;*/
-  height: 500px;
+  /*height: 500px;*/
 
-	background-image: url("../img/web-back2.jpg");
-  height: 800px;
+	/*background-image: url("../img/web-back2.jpg");*/
+/*  height: 800px;*/
 	/*font-size: small;*/
 }
+/*search UFO sightings page*/
 
+
+/*?*/
 .main {
 /*	background-color: #FFF4F0;*/
 
 }
 
+
+/*styling for all page's panels*/
 .panel-heading {
   padding-top:10px;
   padding-bottom:10px;
@@ -77,11 +109,17 @@ body {
   padding-left: 10px;
 }
 
+
+
+
+/*? comment field on submit ufo sighting form*/
 #Comments {
 	height: 100px;
   text-align: left;
 }
 
+
+/*? homepage- container around nav buttons*/
 .interact {
   /*background-color: red;*/
   background-image: url("../img/web-back2.jpg");
@@ -92,40 +130,101 @@ body {
   height: 500px;
 }
 
-.sighting {
-	/*opacity: 0.8;*/
-	filter:sepia(50%);
+/*homepage icons and text*/
+.sighting-home {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter:sepia(50%);
 }
+
+.abduction-home {
+  filter: sepia(50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-home {
+  filter:sepia(50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-h3 {
+  text-align: center;
+}
+
+.homepage-p {
+  text-align: center;
+}
+
+
+
+/*end homepage icons and text*/
+
+
+
+
+
+
+/*nav icons and text*/
+
 
 .abduction {
 	/*opacity: 0.8;*/
 	filter:sepia(50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .search {
 	/*opacity: 0.8;*/
 	filter:sepia(50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-icon {
 	filter:sepia(100%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.nav-text {
+  text-align: center;
+  padding-top: 15px;
 }
 
 .navigation-panel {
-  padding-top:10px;
   padding-bottom:10px;
   padding-right: 10px;
   padding-left: 10px;
   /*background-color: red;*/
 }
 
-/*search results*/
+/*end of nav icons and text*/
+
+
+
+
+
+
+
+
+/*search UFO sightings: search results*/
 .circle {
     background: url("../img/outerSpace.jpg");
+    /*opacity: 0.9;*/
     border-radius: 200px;
     color: white;
     height: 200px;
-    font-weight: bold;
+    font-weight: bolder;
     width: 200px;
     display: table;
     margin: 20px auto;
@@ -137,6 +236,12 @@ body {
     vertical-align: middle;
     display: table-cell;
 }
+/*end search UFO sightings: search results*/
+
+
+
+
+
 
 
 /*d3*/
@@ -186,4 +291,4 @@ body {
   #tooltip tr td:nth-child(2){
     text-align:center;
   }
-
+/*end d3*/

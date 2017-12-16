@@ -29,7 +29,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/d3Test.html"));
   });
   
-
+  app.get("/marsRoverImages", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/marsRoverImages.html"));
+  });
   // app.get("/comments", function(req, res) {
   //   res.sendFile(path.join(__dirname + "../views/homepage.html"));
   //  });
