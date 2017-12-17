@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Abduction</title>
+    <link rel="icon" type="image/png" href="public/assets/img/ufoFavicon.png">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/assets/css/style.css">
@@ -29,13 +30,13 @@
         <div class="col-md-2 navigation-panel">
             <div class="panel panel-default">
                 <a href="homepage.html"><img class="img-circle home-icon" src="../public/assets/img/ufo3.jpeg" alt="Homepage image" width="140" height="140"></a>
-                <p>Home</p>
+                <p class="nav-text">Home</p>
                 <hr>
                 <a href="report.html"><img class="img-circle abduction" src="../public/assets/img/sighting.jpg" alt="Report UFO Sightings image" width="140" height="140"></a>
-                <p>Report a Sighting</p>
+                <p class="nav-text">Report a Sighting</p>
                 <hr>
                 <a href="comments.html"><img class="img-circle search" src="../public/assets/img/ufo2.png" alt="Search UFO Sightings image" width="140" height="140"></a>
-                <p>Search Sightings</p>
+                <p class="nav-text">Search Sightings</p>
                 <hr>
             </div>
         </div>
@@ -56,54 +57,59 @@
                             <button type="submit" class="btn-primary btn-lg" id="submit">Submit</button>
                         </form>
                     </div> -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Abduction Results</h4>
-                        </div>
-                        <div class="panel-body" id="returnAbduction">
-                            <div id="tooltip"></div><!-- div to hold tooltip. -->
-<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-<script src="public/assets/js/uStates.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Abduction Results</h4>
+                            </div>
+                            <div class="panel-body" id="returnAbduction">
+                                <div id="tooltip"></div>
+                                <!-- div to hold tooltip. -->
+                                <svg width="960" height="600" id="statesvg"></svg>
+                                <!-- svg to hold the map. -->
+                                <script src="public/assets/js/uStates.js"></script>
+                                <script src="https://d3js.org/d3.v3.min.js"></script>
+                                <script>
+                                
+                                function tooltipHtml(n, d) { /* function to create html content string in tooltip div. */
+                                    return "<h4>" + n + "</h4><table>" +
+                                        "<tr><td>Low</td><td>" + (d.low) + "</td></tr>" +
+                                        // "<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
+                                        // "<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
+                                        "</table>";
+                                }
 
-    function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
-        return "<h4>"+n+"</h4><table>"+
-            "<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+
-            // "<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
-            // "<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
-            "</table>";
-    }
-    
-    var sampleData ={}; /* Sample random data. */   
-    ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
-    "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
-    "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
-    "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
-    "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
-        .forEach(function(d){ 
-            var low=Math.round(100*Math.random());
-            // var  mid=Math.round(100*Math.random());
-            // var high=Math.round(100*Math.random());
+                                var sampleData = {}; /* Sample random data. */
+                                ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+                                    "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
+                                    "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
+                                    "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
+                                    "WI", "MO", "AR", "OK", "KS", "LS", "VA"
+                                ]
+                                .forEach(function(d) {
+                                    var low = Math.round(100 * Math.random());
+                                    // var  mid=Math.round(100*Math.random());
+                                    // var high=Math.round(100*Math.random());
 
-            sampleData[d]={low:d3.min([low]), color:d3.interpolate("808080", "#191970")(low/100)};
-        });
-        
-    console.log('sampleData ---- right before draw ----', sampleData);
+                                    sampleData[d] = { low: d3.min([low]), color: d3.interpolate("808080", "#191970")(low / 100) };
+                                });
 
-    /* draw states on id #statesvg */   
-    uStates.draw("#statesvg", sampleData, tooltipHtml);
-    
-    d3.select(self.frameElement).style("height", "600px"); 
-</script>
+                                console.log('sampleData ---- right before draw ----', sampleData);
+
+                                /* draw states on id #statesvg */
+                                uStates.draw("#statesvg", sampleData, tooltipHtml);
+
+                                d3.select(self.frameElement).style("height", "600px");
+
+                                
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 
 </html>

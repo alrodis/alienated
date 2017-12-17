@@ -5,7 +5,8 @@ $("#submit").on("click", runSightingQuery);
 function runSightingQuery(event){
 	event.preventDefault();
 	$("#searchResults").empty();
-	var userState =  $("#state").val().trim().toLowerCase();
+	// var userState =  $("#state").val().trim().toLowerCase();
+	var userState =  $(".custom-select").val().trim().toLowerCase();
 	var currentURL =  window.location.orgin;
 
 	$.ajax({url: "/comments", 
