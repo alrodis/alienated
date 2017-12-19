@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
+  //creates a "Sighting" model that matches up with the DB
   var Sighting = sequelize.define("Sightings", {
     city: {
       type: DataTypes.STRING,
@@ -19,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
     duration_seconds:{
       type: DataTypes.INTEGER,
       allowNull: true
-    }, 
+    },
     duration_minutes:{
       type: DataTypes.INTEGER,
       allowNull: true
