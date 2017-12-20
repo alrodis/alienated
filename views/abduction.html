@@ -15,7 +15,7 @@
 
 <body>
     <div class="container-fluid main">
-        <div class="jumbotron jumbotron-billboard">
+        <!-- <div class="jumbotron jumbotron-billboard">
             <div class="img"></div>
             <div class="container">
                 <div class="row">
@@ -27,7 +27,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+    
+        <div class="left">
+                        <h1 class="left__text glitch is-glitching" data-text="Alienated">Alienated</h1>
+                        <p class="jumbo-p">
+                            Because We Are Not Alon<a href="marsRoverImages.html" id="hiddenE">e</a>
+                        </p>
+                    </div>
+
         <div class="col-md-2 navigation-panel">
             <div class="panel panel-default">
                 <a href="homepage.html"><img class="img-circle home-icon" src="../public/assets/img/ufo3.jpeg" alt="Homepage image" width="140" height="140"></a>
@@ -43,7 +51,7 @@
         </div>
         <div class="container-fluid search-form">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-md-10">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">How Likely Are You to be Abducted?</h4>
@@ -61,7 +69,6 @@
                                 <script src="public/assets/js/uStates.js"></script>
                                 <script src="https://d3js.org/d3.v3.min.js"></script>
                                 <script>
-                                
                                 function tooltipHtml(n, d) { /* function to create html content string in tooltip div. */
                                     return "<h4>" + n + "</h4><table>" +
                                         "<tr><td>Low</td><td>" + (d.low) + "</td></tr>" +
@@ -92,7 +99,43 @@
 
                                 d3.select(self.frameElement).style("height", "600px");
 
-                                
+
+                                // var margin = {top: 10, left: 10, bottom: 10, right: 10}
+                                //   , width = parseInt(d3.select('#returnAbduction').style('width'))
+                                //   , width = width - margin.left - margin.right
+                                //   , mapRatio = .5
+                                //   , height = width * mapRatio;
+
+                                //   var projection = d3.geo.albersUsa()
+                                //     .scale(width)
+                                //     .translate([width / 2, height / 2]);
+
+                                // var path = d3.geo.path()
+                                //     .projection(projection);
+
+                                //                                 d3.select(window).on('resize', resize);
+
+                                // function resize() {
+                                //     var map = d3.select('#statesvg')
+                                //     // adjust things when the window size changes
+                                //     width = parseInt(d3.select('#returnAbduction').style('width'));
+                                //     width = width - margin.left - margin.right;
+                                //     height = width * mapRatio;
+
+                                //     // update projection
+                                //     projection
+                                //         .translate([width / 2, height / 2])
+                                //         .scale(width);
+
+                                //     // resize the map container
+                                //     map
+                                //         .style('width', width + 'px')
+                                //         .style('height', height + 'px');
+
+                                //     // resize the map
+                                //     map.select('.land').attr('d', path);
+                                //     map.selectAll('.state').attr('d', path);
+                                // }
                                 </script>
                             </div>
                         </div>
